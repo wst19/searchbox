@@ -12,6 +12,7 @@ and open the template in the editor.
     </head>
   
 <style>
+    
 html, body {
   margin:0;
   height:100%;
@@ -29,13 +30,14 @@ header {
     display: flex;
     flex-direction: row;
     //height: 20px;
-    flex-grow: 0.5;
+    flex-grow: 0.01;
 }
 
 .search_box {       
     display: flex;
     flex-direction: row;
     flex-flow: row wrap;
+    justify-content: Space-between;
 }
 article {  
   flex: 10;   
@@ -49,6 +51,27 @@ footer {
 div {
     padding-left: 5px;
 }
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
 </style>    
 
 <header>
@@ -90,6 +113,15 @@ Integer tempus risus sit amet aliquam lacinia. Phasellus nec nibh vitae odio tri
 Aliquam nec erat non ligula congue ullamcorper id sed massa. Maecenas eget ligula vel dolor suscipit elementum sed a orci. Quisque accumsan mollis lobortis. Vestibulum a lacus viverra, bibendum lacus a, dapibus nulla. Donec laoreet libero ac ante vehicula ultricies. Aenean sollicitudin gravida libero eu tempus. Sed dapibus, felis et consequat aliquet, ante nisl venenatis eros, vitae consequat neque mauris vitae justo. Vestibulum pharetra lacus in est ultricies, bibendum rutrum nisi pulvinar. Mauris ac imperdiet eros, nec convallis velit. Nulla dictum velit eget volutpat suscipit. Aenean eget arcu at ligula convallis rhoncus. Proin ut volutpat leo, nec fringilla erat. Nam pulvinar mattis erat et euismod. Fusce nisl nunc, ultricies ac nulla et, fermentum consequat tellus. Aenean id orci eros.</article>       
 
 <footer>
-    footer
+   <div class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="#">1</a>
+  <a href="#" class="active">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#">&raquo;</a>
+</div>
 </footer>
 </html>
