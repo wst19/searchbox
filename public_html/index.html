@@ -19,83 +19,84 @@ html, body {
   min-height:100%;
 }
 body {
-    margin:0;
-    display: flex;
-    flex-direction: column;
+    margin:0;       
 }
 header {        
-    border-color: black;
-    border-style: solid;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    //height: 20px;
-    flex-grow: 0.01;
+    background-color: #CCC;  
+    box-sizing: border-box;    
+    height: 60px;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;    
+    z-index: 100;
+}
+form {
+        border: 2px solid #CCC;
+        border-color: #CCC;   
+        box-sizing: border-box;    
+}
+
+input {
+    padding: 5px;
+    margin: 0 auto;
+    border-radius: 6px;
+    border: solid 1px #a2a2a2;
+    background: #f8f8f8;
+}
+
+.form_button {    
+    padding: 5px;
+    margin: 0 auto; 
+    text-align: center;        
+    margin: 0 auto;
+    border-radius: 6px;
+    border: none;    
+}
+.field {
+    display: inline-block;      
 }
 
 .search_box {       
-    display: flex;
-    flex-direction: row;
-    flex-flow: row wrap;
-    justify-content: Space-between;
+    
 }
-article {  
-  flex: 10;   
-  overflow-y: scroll;  
+
+article {    
+  overflow-y: scroll; 
+  display: block;
+  box-sizing: border-box;
 }
+
 footer {
-  flex: 1;
-  
-}    
+    }    
 
 div {
     padding-left: 5px;
 }
 
-.pagination {
-    display: inline-block;
-}
-
-.pagination a {
-    color: black;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
-}
-
-.pagination a.active {
-    background-color: #4CAF50;
-    color: white;
-    border-radius: 5px;
-}
-
-.pagination a:hover:not(.active) {
-    background-color: #ddd;
-    border-radius: 5px;
 </style>    
-
+<div>
 <header>
-    <form action="/action_page.php">
-        <div class="search_box">
-            <div> Дата с  <input id="date" type="date" name="doc_date1"> </div>
-            <div> Дата по  <input id="date" type="date" name="doc_date2"> </div>
-            <div> 
-                Клиент <input list="clientList" name="doc_client"> 
-                <datalist id="clientList">
-                <option value="Иванов">111</option>
-                <option value="Петров">112</option>
-                <option value="Виноградов">113</option>                
-                </datalist>
-            </div>  
-            <div> Название документа  <input type="text" name="doc_name" value=""> </div>
-            <div> Hash <input type="text" name="doc_hash" value=""> </div>  
-            <div style="display: flex; flex-direction: row">
-            <div><input type="submit" value="Применить фильр"></div>  
-            <div><input type="reset" value="Очистить фильтр"></div>  
-            </div>
-        </div>   
+    <form method =POST >
+        <div class="search_box">    
+             <p class="field">
+             <label for="doc_date1">Дата с </label>
+             <input id="date_id" type="date" name="doc_date1">                                      
+             <label for="doc_date2">Дата по </label>
+             <input id="date_id2" type="date" name="doc_date2">            
+             <label for="doc_client">Клиент </label>
+             <input id="doc_client_id" type="text" name="doc_client">   
+             <label for="doc_name">Название документа </label>
+             <input id="doc_name_id" type="text" name="doc_name">   
+             <label for="doc_hash">Hash </label>
+             <input id="doc_hash_id" type="text" name="doc_hash">   
+             <input class="form_button" type="submit" value="Применить фильтр">
+             <input class="form_button" type="reset" value="Очистить фильтр">  
+             <p>                
+         </div>               
     </form>   
 </header>
+</div>    
 <article>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vestibulum augue. Pellentesque suscipit tellus quis dapibus fermentum. Sed risus lectus, mollis quis orci vitae, mattis consequat sapien. Sed vitae cursus nisi. Suspendisse cursus felis nec felis ornare, sit amet ullamcorper diam dictum. Fusce feugiat pellentesque lorem, at eleifend tellus rutrum sit amet. Vestibulum id neque est. Duis interdum nunc nec lobortis rutrum. Sed ut tincidunt turpis, et adipiscing urna. Nam sit amet tellus et elit fringilla tempus ut vitae erat. Integer eu placerat magna, non ornare felis. Aenean eu dapibus leo. Cras dui nisi, volutpat in pretium vitae, ultrices a dui. Nullam consequat feugiat purus non vehicula. Aenean lacinia, mi non euismod malesuada, lorem dolor scelerisque velit, sed consequat ante leo quis nisl.
 
 Etiam vel lacus dolor. Quisque at fringilla eros. Vivamus eget turpis sem. Praesent vel hendrerit ante. In hac habitasse platea dictumst. Integer scelerisque diam ut justo feugiat, quis porttitor felis imperdiet. Mauris at ullamcorper sem. In hac habitasse platea dictumst. Vivamus ultrices leo vitae lacinia vulputate. Vestibulum orci ligula, imperdiet non luctus eget, luctus eu nisl. Maecenas mollis eleifend sollicitudin. Praesent dictum tristique ipsum, quis imperdiet quam. Praesent euismod velit sed ipsum posuere vulputate. Praesent placerat ipsum sed neque viverra, sed adipiscing tortor pulvinar. Phasellus blandit sit amet ligula quis ultrices.
@@ -113,15 +114,6 @@ Integer tempus risus sit amet aliquam lacinia. Phasellus nec nibh vitae odio tri
 Aliquam nec erat non ligula congue ullamcorper id sed massa. Maecenas eget ligula vel dolor suscipit elementum sed a orci. Quisque accumsan mollis lobortis. Vestibulum a lacus viverra, bibendum lacus a, dapibus nulla. Donec laoreet libero ac ante vehicula ultricies. Aenean sollicitudin gravida libero eu tempus. Sed dapibus, felis et consequat aliquet, ante nisl venenatis eros, vitae consequat neque mauris vitae justo. Vestibulum pharetra lacus in est ultricies, bibendum rutrum nisi pulvinar. Mauris ac imperdiet eros, nec convallis velit. Nulla dictum velit eget volutpat suscipit. Aenean eget arcu at ligula convallis rhoncus. Proin ut volutpat leo, nec fringilla erat. Nam pulvinar mattis erat et euismod. Fusce nisl nunc, ultricies ac nulla et, fermentum consequat tellus. Aenean id orci eros.</article>       
 
 <footer>
-   <div class="pagination">
-  <a href="#">&laquo;</a>
-  <a href="#">1</a>
-  <a href="#" class="active">2</a>
-  <a href="#">3</a>
-  <a href="#">4</a>
-  <a href="#">5</a>
-  <a href="#">6</a>
-  <a href="#">&raquo;</a>
-</div>
+  footer
 </footer>
 </html>
