@@ -17,103 +17,128 @@ html, body {
   margin:0;
   height:100%;
   min-height:100%;
+  font: 12px Verdana, sans-serif;
 }
-body {
-    margin:0;       
+
+body
+{
+    display: flex;
+    flex-direction: column;
 }
+
+
 header {        
-    background-color: #CCC;  
+    background-color: #e6ecf0;  
     box-sizing: border-box;    
-    height: 60px;
+    box-shadow: 0 1px 0 rgba(12,13,14,0.15), 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent;
+    height: 36px;
     position: fixed; 
-    top: 0;
-    left: 0;
+    left: 0px;
+    top: 0px;    
     width: 100%;    
     z-index: 100;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0.5;
 }
-form {
+
+.search_form {
         border: 2px solid #CCC;
         border-color: #CCC;   
-        box-sizing: border-box;    
+        box-sizing: border-box;  
+        width: 100%; 
+        height: 100%;
+        position: relative;
+        top: 0px;       
+        display: flex;
+        flex-direction: row;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: flex-start;
 }
 
-input {
-    padding: 5px;
-    margin: 0 auto;
-    border-radius: 6px;
-    border: solid 1px #a2a2a2;
-    background: #f8f8f8;
+.search_form label {        
+    margin: 0px; 
 }
 
-.form_button {    
-    padding: 5px;
+.search_form input {       
+        text-align: center;        
+        padding: 3px;
+        margin: 4px auto;
+        border-radius: 3px;
+        border: solid 1px #a2a2a2;
+        background: #f8f8f8;
+        box-sizing: border-box;  
+}
+
+.search_form button {    
+    padding: 3px;
     margin: 0 auto; 
     text-align: center;        
-    margin: 0 auto;
-    border-radius: 6px;
-    border: none;    
-}
-.field {
-    display: inline-block;      
+    margin: 4px; ;
+    border-radius: 3px;
+    border: initial;   
+    background: initial;
 }
 
-.search_box {       
-    
-}
+
 
 article {    
-  overflow-y: scroll; 
+  //overflow-y: scroll; 
   display: block;
   box-sizing: border-box;
+  top : 42px;
+  position: relative;
+  flex: 10;
 }
 
 footer {
-    }    
+    box-sizing: border-box;    
+    background-color: #e6ecf0;  
+    box-sizing: border-box;        
+    height: 40px;
+    flex: 1;
+ }    
 
 div {
-    padding-left: 5px;
+    ;
 }
 
 </style>    
-<div>
 <header>
-    <form method =POST >
-        <div class="search_box">    
-             <p class="field">
+    <form class="search_form" method =POST >             
              <label for="doc_date1">Дата с </label>
-             <input id="date_id" type="date" name="doc_date1">                                      
+             <input class="form_input" id="date_id" type="date" name="doc_date1">                                      
              <label for="doc_date2">Дата по </label>
-             <input id="date_id2" type="date" name="doc_date2">            
+             <input class="form_input" id="date_id2" type="date" name="doc_date2">            
              <label for="doc_client">Клиент </label>
-             <input id="doc_client_id" type="text" name="doc_client">   
+             <input class="form_input" id="doc_client_id" type="text" name="doc_client">   
              <label for="doc_name">Название документа </label>
-             <input id="doc_name_id" type="text" name="doc_name">   
+             <input class="form_input" id="doc_name_id" type="text" name="doc_name">   
              <label for="doc_hash">Hash </label>
-             <input id="doc_hash_id" type="text" name="doc_hash">   
+             <input class="form_input" id="doc_hash_id" type="text" name="doc_hash">   
              <input class="form_button" type="submit" value="Применить фильтр">
-             <input class="form_button" type="reset" value="Очистить фильтр">  
-             <p>                
-         </div>               
+             <input class="form_input" class="form_button" type="reset" value="Очистить фильтр">               
     </form>   
 </header>
-</div>    
-<article>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vestibulum augue. Pellentesque suscipit tellus quis dapibus fermentum. Sed risus lectus, mollis quis orci vitae, mattis consequat sapien. Sed vitae cursus nisi. Suspendisse cursus felis nec felis ornare, sit amet ullamcorper diam dictum. Fusce feugiat pellentesque lorem, at eleifend tellus rutrum sit amet. Vestibulum id neque est. Duis interdum nunc nec lobortis rutrum. Sed ut tincidunt turpis, et adipiscing urna. Nam sit amet tellus et elit fringilla tempus ut vitae erat. Integer eu placerat magna, non ornare felis. Aenean eu dapibus leo. Cras dui nisi, volutpat in pretium vitae, ultrices a dui. Nullam consequat feugiat purus non vehicula. Aenean lacinia, mi non euismod malesuada, lorem dolor scelerisque velit, sed consequat ante leo quis nisl.
+<article>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p>
+        Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi. Aenean magna nisl, mollis quis, molestie eu, feugiat in, orci. In hac habitasse platea dictumst.
+    </p>
+    <p>
+        Fusce convallis, mauris imperdiet gravida bibendum, nisl turpis suscipit mauris, sed placerat ipsum urna sed risus. In convallis tellus a mauris. Curabitur non elit ut libero tristique sodales. Mauris a lacus. Donec mattis semper leo. In hac habitasse platea dictumst. Vivamus facilisis diam at odio. Mauris dictum, nisi eget consequat elementum, lacus ligula molestie metus, non feugiat orci magna ac sem. Donec turpis. Donec vitae metus. Morbi tristique neque eu mauris. Quisque gravida ipsum non sapien. Proin turpis lacus, scelerisque vitae, elementum at, lobortis ac, quam. Aliquam dictum eleifend risus. In hac habitasse platea dictumst. Etiam sit amet diam. Suspendisse odio. Suspendisse nunc. In semper bibendum libero.
+    </p>    
+        Proin nonummy, lacus eget pulvinar lacinia, pede felis dignissim leo, vitae tristique magna lacus sit amet eros. Nullam ornare. Praesent odio ligula, dapibus sed, tincidunt eget, dictum ac, nibh. Nam quis lacus. Nunc eleifend molestie velit. Morbi lobortis quam eu velit. Donec euismod vestibulum massa. Donec non lectus. Aliquam commodo lacus sit amet nulla. Cras dignissim elit et augue. Nullam non diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hac habitasse platea dictumst. Aenean vestibulum. Sed lobortis elit quis lectus. Nunc sed lacus at augue bibendum dapibus.
+    </p>
 
-Etiam vel lacus dolor. Quisque at fringilla eros. Vivamus eget turpis sem. Praesent vel hendrerit ante. In hac habitasse platea dictumst. Integer scelerisque diam ut justo feugiat, quis porttitor felis imperdiet. Mauris at ullamcorper sem. In hac habitasse platea dictumst. Vivamus ultrices leo vitae lacinia vulputate. Vestibulum orci ligula, imperdiet non luctus eget, luctus eu nisl. Maecenas mollis eleifend sollicitudin. Praesent dictum tristique ipsum, quis imperdiet quam. Praesent euismod velit sed ipsum posuere vulputate. Praesent placerat ipsum sed neque viverra, sed adipiscing tortor pulvinar. Phasellus blandit sit amet ligula quis ultrices.
-
-Integer tempus risus sit amet aliquam lacinia. Phasellus nec nibh vitae odio tristique commodo. Proin mollis iaculis sapien, a vestibulum odio tincidunt facilisis. Vestibulum sed nibh ornare, mattis ligula quis, porttitor magna. Duis interdum mattis mauris, vel molestie massa porta sit amet. Maecenas vel urna et nisl sodales volutpat non sed urna. Nam dui tortor, semper sed dictum non, congue quis leo. Aenean vitae mi bibendum, sollicitudin sem et, laoreet massa. Nulla ornare augue velit, non placerat nulla pretium et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non rutrum neque, ac ultrices sapien. Etiam lacinia libero vitae dolor ullamcorper laoreet. Phasellus at auctor leo. Sed blandit urna non justo ornare blandit. In sagittis tortor viverra iaculis scelerisque. Praesent fringilla sed orci quis varius.
-
-Aliquam nec erat non ligula congue ullamcorper id sed massa. Maecenas eget ligula vel dolor suscipit elementum sed a orci. Quisque accumsan mollis lobortis. Vestibulum a lacus viverra, bibendum lacus a, dapibus nulla. Donec laoreet libero ac ante vehicula ultricies. Aenean sollicitudin gravida libero eu tempus. Sed dapibus, felis et consequat aliquet, ante nisl venenatis eros, vitae consequat neque mauris vitae justo. Vestibulum pharetra lacus in est ultricies, bibendum rutrum nisi pulvinar. Mauris ac imperdiet eros, nec convallis velit. Nulla dictum velit eget volutpat suscipit. Aenean eget arcu at ligula convallis rhoncus. Proin ut volutpat leo, nec fringilla erat. Nam pulvinar mattis erat et euismod. Fusce nisl nunc, ultricies ac nulla et, fermentum consequat tellus. Aenean id orci eros. 
+</article>
     
- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vestibulum augue. Pellentesque suscipit tellus quis dapibus fermentum. Sed risus lectus, mollis quis orci vitae, mattis consequat sapien. Sed vitae cursus nisi. Suspendisse cursus felis nec felis ornare, sit amet ullamcorper diam dictum. Fusce feugiat pellentesque lorem, at eleifend tellus rutrum sit amet. Vestibulum id neque est. Duis interdum nunc nec lobortis rutrum. Sed ut tincidunt turpis, et adipiscing urna. Nam sit amet tellus et elit fringilla tempus ut vitae erat. Integer eu placerat magna, non ornare felis. Aenean eu dapibus leo. Cras dui nisi, volutpat in pretium vitae, ultrices a dui. Nullam consequat feugiat purus non vehicula. Aenean lacinia, mi non euismod malesuada, lorem dolor scelerisque velit, sed consequat ante leo quis nisl.
-
-Etiam vel lacus dolor. Quisque at fringilla eros. Vivamus eget turpis sem. Praesent vel hendrerit ante. In hac habitasse platea dictumst. Integer scelerisque diam ut justo feugiat, quis porttitor felis imperdiet. Mauris at ullamcorper sem. In hac habitasse platea dictumst. Vivamus ultrices leo vitae lacinia vulputate. Vestibulum orci ligula, imperdiet non luctus eget, luctus eu nisl. Maecenas mollis eleifend sollicitudin. Praesent dictum tristique ipsum, quis imperdiet quam. Praesent euismod velit sed ipsum posuere vulputate. Praesent placerat ipsum sed neque viverra, sed adipiscing tortor pulvinar. Phasellus blandit sit amet ligula quis ultrices.
-
-Integer tempus risus sit amet aliquam lacinia. Phasellus nec nibh vitae odio tristique commodo. Proin mollis iaculis sapien, a vestibulum odio tincidunt facilisis. Vestibulum sed nibh ornare, mattis ligula quis, porttitor magna. Duis interdum mattis mauris, vel molestie massa porta sit amet. Maecenas vel urna et nisl sodales volutpat non sed urna. Nam dui tortor, semper sed dictum non, congue quis leo. Aenean vitae mi bibendum, sollicitudin sem et, laoreet massa. Nulla ornare augue velit, non placerat nulla pretium et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non rutrum neque, ac ultrices sapien. Etiam lacinia libero vitae dolor ullamcorper laoreet. Phasellus at auctor leo. Sed blandit urna non justo ornare blandit. In sagittis tortor viverra iaculis scelerisque. Praesent fringilla sed orci quis varius.
-
-Aliquam nec erat non ligula congue ullamcorper id sed massa. Maecenas eget ligula vel dolor suscipit elementum sed a orci. Quisque accumsan mollis lobortis. Vestibulum a lacus viverra, bibendum lacus a, dapibus nulla. Donec laoreet libero ac ante vehicula ultricies. Aenean sollicitudin gravida libero eu tempus. Sed dapibus, felis et consequat aliquet, ante nisl venenatis eros, vitae consequat neque mauris vitae justo. Vestibulum pharetra lacus in est ultricies, bibendum rutrum nisi pulvinar. Mauris ac imperdiet eros, nec convallis velit. Nulla dictum velit eget volutpat suscipit. Aenean eget arcu at ligula convallis rhoncus. Proin ut volutpat leo, nec fringilla erat. Nam pulvinar mattis erat et euismod. Fusce nisl nunc, ultricies ac nulla et, fermentum consequat tellus. Aenean id orci eros.</article>       
-
 <footer>
-  footer
+  <p> footer </p>
 </footer>
+
+</body>
 </html>
